@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter_polywebview/flutter_inappwebview.dart';
 
 import 'main.dart';
 
@@ -37,7 +37,8 @@ class MyInAppBrowser extends InAppBrowser {
   }
 
   @override
-  Future<ShouldOverrideUrlLoadingAction> shouldOverrideUrlLoading(ShouldOverrideUrlLoadingRequest shouldOverrideUrlLoadingRequest) async {
+  Future<ShouldOverrideUrlLoadingAction> shouldOverrideUrlLoading(
+      ShouldOverrideUrlLoadingRequest shouldOverrideUrlLoadingRequest) async {
     print("\n\n override ${shouldOverrideUrlLoadingRequest.url}\n\n");
     this.webViewController.loadUrl(url: shouldOverrideUrlLoadingRequest.url);
     return ShouldOverrideUrlLoadingAction.CANCEL;
@@ -93,8 +94,8 @@ class _InAppBrowserExampleScreenState extends State<InAppBrowserExampleScreen> {
                     options: InAppBrowserClassOptions(
                         inAppWebViewWidgetOptions: InAppWebViewWidgetOptions(
                             crossPlatform: InAppWebViewOptions(
-                            useShouldOverrideUrlLoading: true,
-                            useOnLoadResource: true,
+                      useShouldOverrideUrlLoading: true,
+                      useOnLoadResource: true,
                     ))));
               },
               child: Text("Open Webview Browser")),

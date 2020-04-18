@@ -1,3 +1,8 @@
+## 4.0.0
+- Added pull request from wwwdata [github](https://github.com/pichillilorenzo/flutter_inappwebview/pull/295)
+- Changin name flutter_inappwebview to flutter_polywebview
+
+
 ## 3.0.0
 
 - Added `Promise` javascript [polyfill](https://github.com/taylorhakes/promise-polyfill/blob/master/src/index.js) for webviews that doesn't support it for `window.flutter_inappwebview.callHandler`

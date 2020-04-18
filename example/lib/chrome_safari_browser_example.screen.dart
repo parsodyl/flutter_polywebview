@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter_polywebview/flutter_inappwebview.dart';
 
 import 'main.dart';
 
@@ -52,7 +52,8 @@ class _ChromeSafariBrowserExampleScreenState
                 await widget.browser.open(
                     url: "https://flutter.dev/",
                     options: ChromeSafariBrowserClassOptions(
-                        android: AndroidChromeCustomTabsOptions(addShareButton: false),
+                        android: AndroidChromeCustomTabsOptions(
+                            addShareButton: false),
                         ios: IOSSafariOptions(barCollapsingEnabled: true)));
               },
               child: Text("Open Chrome Safari Browser")),

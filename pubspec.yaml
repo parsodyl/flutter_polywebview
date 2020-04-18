@@ -1,6 +1,6 @@
-name: flutter_inappwebview
+name: flutter_polywebview
 description: A Flutter plugin that allows you to add an inline webview or open an in-app browser window.
-version: 3.0.0
+version: 4.0.0
 author: Lorenzo Pichilli <pichillilorenzo@gmail.com>
 homepage: https://github.com/pichillilorenzo/flutter_inappwebview
 
@@ -25,8 +25,8 @@ flutter:
     pluginClass: InAppWebViewFlutterPlugin
 
   assets:
-    - packages/flutter_inappwebview/t_rex_runner/t-rex.html
-    - packages/flutter_inappwebview/t_rex_runner/t-rex.css
+    - packages/flutter_polywebview/t_rex_runner/t-rex.html
+    - packages/flutter_polywebview/t_rex_runner/t-rex.css
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
