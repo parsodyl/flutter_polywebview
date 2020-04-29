@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_inappwebview_example/chrome_safari_browser_example.screen.dart';
-import 'package:flutter_inappwebview_example/in_app_browser_example.screen.dart';
 import 'package:flutter_inappwebview_example/in_app_webiew_example.screen.dart';
+import 'package:flutter_inappwebview_example/in_app_browser_example.screen.dart';
 
 // InAppLocalhostServer localhostServer = new InAppLocalhostServer();
 
@@ -52,13 +54,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: '/', routes: {
-      '/': (context) => InAppWebViewExampleScreen(),
-      '/InAppBrowser': (context) => InAppBrowserExampleScreen(),
-      '/ChromeSafariBrowser': (context) => ChromeSafariBrowserExampleScreen(),
-    });
+  void initState() {
+    super.initState();
   }
 
   @override
@@ -67,7 +66,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  void initState() {
-    super.initState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        initialRoute: '/',
+        routes: {
+          '/': (context) => InAppWebViewExampleScreen(),
+          '/InAppBrowser': (context) => InAppBrowserExampleScreen(),
+          '/ChromeSafariBrowser': (context) => ChromeSafariBrowserExampleScreen(),
+        }
+    );
   }
 }
